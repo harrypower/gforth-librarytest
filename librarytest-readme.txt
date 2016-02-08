@@ -16,3 +16,11 @@ sudo ln -sf /usr/lib/libtest.so.1.0.1 /usr/lib/libtest.so.1
   \ This makes another symbolic link to the shared library with the main version number only
 sudo ldconfig -n /usr/lib/
   \ This tells the debian system to reconfigure all the shared librarys in the library folder
+
+
+gcc testing.c -ltest -o myctest.exe
+  \ This is how you would link to the shared library in a c code.
+  \ Note the -ltest is the name of the shared library were test is the real name and l is the message 
+  \ to the compiler that you are linking to a shared library. 
+./myctest.exe
+  \ this is the way you run your new c compiled executable at command line.
